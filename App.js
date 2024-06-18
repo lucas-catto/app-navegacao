@@ -1,9 +1,8 @@
-// In App.js in a new project
-
+import 'react-native-gesture-handler';
 import * as React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import HomeScreen from "./components/views/HomeScreen";
 
@@ -15,15 +14,15 @@ function SobreScreen() {
     );
 }
 
-const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
 function App() {
     return (
         <NavigationContainer>
-            <Stack.Navigator>
-                <Stack.Screen name="Home"  component={HomeScreen} />
-                <Stack.Screen name="Sobre" component={SobreScreen} />
-            </Stack.Navigator>
+            <Drawer.Navigator>
+                <Drawer.Screen name="Home"  component={HomeScreen} />
+                <Drawer.Screen name="Sobre" component={SobreScreen} />
+            </Drawer.Navigator>
         </NavigationContainer>
     );
 }
