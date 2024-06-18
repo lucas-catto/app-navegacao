@@ -5,18 +5,7 @@ import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function HomeScreen(props) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Home Screen</Text>
-
-            <Button
-                title='Ir Para Sobre'
-                onPress={() => props.navigation.navigate('Sobre')}
-            ></Button>
-        </View>
-    );
-}
+import HomeScreen from "./components/views/HomeScreen";
 
 function SobreScreen() {
     return (
